@@ -6,23 +6,29 @@
       </div>
       <nav class="nav">
         <ul class="nav__menu">
-          <li class="nav__item">
-            <nuxt-link class="nav__item-link" exact to="/">Главная</nuxt-link>
-          </li>
-          <li class="nav__item">
-            <nuxt-link class="nav__item-link" exact to="/about">О нас</nuxt-link>
-          </li>
-          <li class="nav__item">
-            <nuxt-link class="nav__item-link" exact to="/">Почему мы</nuxt-link>
-          </li>
-          <li class="nav__item">
-            <nuxt-link class="nav__item-link" exact to="/">Контакты</nuxt-link>
+          <li class="nav__item" v-for="it in nav" :key="it.name">
+            <nuxt-link class="nav__item-link" exact :to="it.link">{{it.name}}</nuxt-link>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        nav: [
+          { name: 'Главная', link: '/' },
+          { name: 'О нас', link: '/about' },
+          { name: 'Почему мы', link: '' },
+          { name: 'Контакты', link: '' },
+        ]
+      }
+    }
+  }
+</script>
 
 <style lang="scss" scoped>
 
