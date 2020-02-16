@@ -1,34 +1,55 @@
 <template>
-  <svg class="NuxtLogo" width="245" height="180" viewBox="0 0 452 342" xmlns="http://www.w3.org/2000/svg">
-    <g fill="none" fill-rule="evenodd">
-      <path
-        d="M139 330l-1-2c-2-4-2-8-1-13H29L189 31l67 121 22-16-67-121c-1-2-9-14-22-14-6 0-15 2-22 15L5 303c-1 3-8 16-2 27 4 6 10 12 24 12h136c-14 0-21-6-24-12z"
-        fill="#00C58E"
-      />
-      <path
-        d="M447 304L317 70c-2-2-9-15-22-15-6 0-15 3-22 15l-17 28v54l39-67 129 230h-49a23 23 0 0 1-2 14l-1 1c-6 11-21 12-23 12h76c3 0 17-1 24-12 3-5 5-14-2-26z"
-        fill="#108775"
-      />
-      <path
-        d="M376 330v-1l1-2c1-4 2-8 1-12l-4-12-102-178-15-27h-1l-15 27-102 178-4 12a24 24 0 0 0 2 15c4 6 10 12 24 12h190c3 0 18-1 25-12zM256 152l93 163H163l93-163z"
-        fill="#2F495E"
-        fill-rule="nonzero"
-      />
-    </g>
-  </svg>
+  <div class="logo" ref="logo">
+    <svg class="logo-svg" id="one" viewBox="0 0 117.1 171.3">
+      <path class="st0" d="M99,161.8H18.5c-2.4,0-4.4-2-4.4-4.4v-15.4c0-2.4,2-4.4,4.4-4.4H99c2.4,0,4.4,2,4.4,4.4v15.4
+      C103.4,159.9,101.4,161.8,99,161.8z"/>
+      <path class="st1" d="M102.9,119.3L84,81.7c-0.3-0.4-0.4-1-0.4-1.8c0-0.8,0.5-1.4,1.3-2c5.3-3.3,9.3-7.6,12-12.8
+      c2.7-5.3,4-11.2,4-17.8c0-6.9-1.1-12.8-3.4-17.5c-2.3-4.8-5.4-8.6-9.2-11.6c-3.8-3-8.3-5.1-13.3-6.4c-5.1-1.3-10.4-2-16-2H27.2
+      c-3.5,0-6.5,1.3-9.2,4c-2.6,2.7-3.9,6.1-3.9,10.1v96.5c0,1,0.4,1.9,1.1,2.7s1.6,1.2,2.6,1.2h20.6c1.1,0,2-0.4,2.7-1.1
+      c0.7-0.7,1.1-1.6,1.1-2.8v-0.6V93.3v-8.7h11.5c1.8,0,3.1,0.9,4,2.6l15.3,32.9c1.2,2.9,3.2,4.3,6,4.3h21.2c0.8,0,1.5-0.3,2.2-1
+      c0.7-0.7,1-1.4,1-2.3C103.4,120.5,103.2,119.9,102.9,119.3z M59,65.9c-0.4,0-8.8,0-13.7,0c-2,0-3.6-1.6-3.6-3.6V30.4
+      c0-2,1.6-3.6,3.6-3.6c5,0,13.6,0,14,0c12,0,14.9,9,14.8,19.6C74.1,57.2,70.1,65.9,59,65.9z"/>
+    </svg>
+  </div>
 </template>
-<style>
-.NuxtLogo {
-  animation: 1s appear;
-  margin: auto;
-}
+<script>
+  export default {
+    data() {
+      return {
+        tl: null
+      }
+    },
 
-@keyframes appear {
-  0% {
-    opacity: 0;
+    mounted() {
+      setTimeout(() => {
+        this.tl = new TimelineMax({})
+        document.addEventListener('click', () => {
+          console.log(this.$refs.logo)
+          this.tl.to('.logo', 1,{ scale: .5})
+        })
+      }, 0)
+    }
   }
-  100% {
-    opacity: 1;
+</script>
+<style lang="scss" scoped>
+  .logo {
+    position: absolute;
+    width: 150px;
+
+    &-svg {
+      width: 100%;
+    }
   }
-}
+
+  .st0 {
+    fill: #ffffff;
+    stroke: #ffffff;
+    stroke-width: 1;
+  }
+
+  .st1 {
+    fill: #ffffff;
+    stroke: #ffffff;
+    stroke-width: 1;
+  }
 </style>

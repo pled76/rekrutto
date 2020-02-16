@@ -15,7 +15,9 @@ module.exports = {
   },
   loading: false,
   css: [],
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/index.js', ssr: false }
+  ],
   buildModules: [],
   modules: [
     '@nuxtjs/style-resources',
@@ -48,8 +50,7 @@ module.exports = {
           cache: true,
           parallel: true,
           sourceMap: true,
-          terserOptions: {
-          }
+          terserOptions: {}
         }),
       ],
       splitChunks: {

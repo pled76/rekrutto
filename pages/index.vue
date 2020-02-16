@@ -1,15 +1,18 @@
 <template>
   <div class="main-page">
     <app-main/>
+    <Logo/>
   </div>
 </template>
 
 <script>
-import AppMain from '~/components/AppMain.vue'
+import AppMain from '~/components/AppMain'
+import Logo from '~/components/Logo'
 
 export default {
   components: {
-    AppMain
+    AppMain,
+    Logo
   }
 }
 </script>
