@@ -1,3 +1,5 @@
+const TerserPlugin = require('terser-webpack-plugin')
+
 module.exports = {
   mode: 'universal',
   head: {
@@ -34,8 +36,28 @@ module.exports = {
         collapseWhitespace: false
       }
     },
+
     extractCSS: {
       allChunks: true
+    },
+
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new TerserPlugin({
+          cache: true,
+          parallel: true,
+          sourceMap: true,
+          terserOptions: {
+          }
+        }),
+      ],
+      splitChunks: {
+        chunks: 'all',
+        automaticNameDelimiter: '.',
+        name: undefined,
+        cacheGroups: {}
+      }
     },
 
     extend(config, { isDev, isClient }) {
