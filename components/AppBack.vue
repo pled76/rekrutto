@@ -36,8 +36,8 @@
         this.tl = new TimelineMax({})
         this.tl.set('.line', { drawSVG: '0% 0%'})
         this.tl.set('.back-logo', { opacity: 0, x: 30})
-        this.tl.to('.back-logo', 1, { opacity: .1, x: 0}, '-=1')
         this.drawLines()
+        this.tl.to('.back-logo', 1, { opacity: .1, x: 0}, '-=1')
       }, 0)
 
     },
