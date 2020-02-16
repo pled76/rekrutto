@@ -4,6 +4,13 @@
   color: $color;
 }
 
+@mixin fontCunia($color, $fontSize) {
+  font-family: 'Cunia', sans-serif;
+  font-size: $fontSize;
+  color: $color;
+}
+
+
 @mixin fontNun($color, $fontSize) {
   font-family: 'Nunito-Regular', sans-serif;
   font-size: $fontSize;

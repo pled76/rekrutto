@@ -1,7 +1,5 @@
-import 'gsap'
-import '@/plugins/gsap/minified/plugins/MorphSVGPlugin.min'
-import '@/plugins/gsap/minified/plugins/DrawSVGPlugin.min'
-import TimelineMax from './gsap/esm/TimelineMax.js'
-
-window.TimelineMax = TimelineMax
-
+import './gsap/esm/TweenMax'
+import './gsap/npm/MorphSVGPlugin'
+import './gsap/npm/DrawSVGPlugin'
+import './gsap/esm/TimelineMax'
+import './gsap/esm/EasePack'

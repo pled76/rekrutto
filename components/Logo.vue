@@ -21,20 +21,15 @@
     },
 
     mounted() {
-      setTimeout(() => {
-        this.tl = new TimelineMax({})
-        document.addEventListener('click', () => {
-          console.log(this.$refs.logo)
-          this.tl.to('.logo', 1,{ scale: .5})
-        })
-      }, 0)
+      this.tl = new TimelineMax({})
+      this.tl.set('.logo', { scale: .5, opacity: 0 })
     }
   }
 </script>
 <style lang="scss" scoped>
   .logo {
-    position: absolute;
-    width: 150px;
+    position: relative;
+    width: 140px;
 
     &-svg {
       width: 100%;

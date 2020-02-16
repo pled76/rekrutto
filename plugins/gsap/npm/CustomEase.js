@@ -11,7 +11,7 @@
  **/
 /* eslint-disable */
 
-import { _gsScope, globals, Ease } from "gsap/TweenLite.js";
+import { _gsScope, globals, Ease } from "../esm/TweenLite";
 
 _gsScope._gsDefine("easing.CustomEase", ["easing.Ease"], function() {
 
