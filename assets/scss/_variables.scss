@@ -1,0 +1,31 @@
+$bcgWhite: #f4f4f4;
+$white: #fefefe;
+$red: #fa3159;
+$black: #272727;
+$green: #23a051;
+$greenLight: #00d42b;
+$blue: #1d3fff;
+$blueLight: #00acff;
+$orange: #ff601e;
+$darkBlue: #040424;
+$darkGrey: #848c91;
+$grey: #d8dce6;
+
+$boxShadow: 0 6px 7px -4px rgba(0, 0, 0, .2), 0 11px 15px 1px rgba(0, 0, 0, .14), 0 4px 20px 3px rgba(0, 0, 0, .12);
+
+  //border
+$border: 1px solid red;
+
+  //fonts
+$exo: 'Exo2-Regular', sans-serif;
+
+  //sizes
+$col: 100% / 12;
+$colFix: 1300px / 12;
+
+$headerHeight: 60px;
+$asideWidth: 60px;
+
+@media screen and(max-width: 1500px) {
+  $col: 100% / 6
+}

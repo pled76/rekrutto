@@ -1,0 +1,46 @@
+.danger {
+  background: $red;
+}
+
+.success{
+  background: $green;
+}
+
+.info {
+  background: $blue;
+}
+
+.warning {
+  background-color: #dda325;
+}
+
+.black {
+  background: $black;
+}
+
+.white {
+  background: $white;
+}
+
+.focused {
+  font-size: .8em !important;
+  top: -35px !important;
+}
+
+.active-icon {
+  fill: $green !important;
+  stroke: none !important;
+  transition: all .3s ease;
+}
+
+.error {
+  border-bottom: 2px solid red !important;
+}
+
+.green {
+  color: $green;
+}
+
+.red {
+  color: $red;
+}
