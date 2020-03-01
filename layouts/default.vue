@@ -1,6 +1,16 @@
 <template>
   <div class="container">
-    <AppHeader/>
+    <div class="video">
+      <div class="video__color"></div>
+      <video class="video__source" autoplay loop muted>
+        <source src="../assets/video/Big-City-Life.mp4">
+        <source src="../assets/video/Big-City-Life.ogv">
+        <source src="../assets/video/Big-City-Life.webm">
+      </video>
+    </div>
+    <transition name="slideIn">
+      <AppHeader v-show="showHeader"/>
+    </transition>
     <AppBack/>
     <nuxt/>
   </div>
@@ -13,6 +23,14 @@
     components: {
       AppBack,
       AppHeader
+    },
+    mounted() {
+      this.showHeader = true
+    },
+    data() {
+      return {
+        showHeader: false,
+      }
     }
   }
 </script>
@@ -25,5 +43,28 @@
     overflow: hidden;
     background: $black;
     position: relative;
+  }
+  .video{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+
+    &__color{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 1, .4);
+      background-blend-mode: multiply;
+      filter: chroma(10);
+    }
+    &__source{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 </style>

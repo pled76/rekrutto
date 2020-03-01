@@ -16,12 +16,20 @@
         </div>
         <h1 class="brand__head">Rekrutto</h1>
       </div>
+      <div class="slogan-block">
+        <div class="slogan">
+          <div class="slogan__word">Система автоматизации</div>
+          <div class="slogan__word">подбора персонала</div>
+          <p class="slogan__text">для тех, кто ценит свое время</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
   export default {
+    head: {},
     transition: {
       mode: 'out-in',
       css: false,
@@ -29,7 +37,9 @@
         const tl = new TimelineMax({})
         tl.to('.st0, .st1', 1, { drawSVG: '0% 0%', fill: 'transparent' })
         tl.to('.logo', 1, { opacity: 0, y: -20 })
-        tl.to('.brand__head', 1, { y: 20, opacity: 0, onComplete: done() })
+        tl.to('.brand__head', 1, { y: 20, opacity: 0, }, '-=1')
+        tl.staggerTo('.slogan__word', .5, { opacity: 0 }, .2, '-=1')
+        tl.to('.slogan__text', .5, { opacity: 0, onComplete: done }, '-=.5')
       }
     },
     data() {
@@ -40,32 +50,37 @@
     mounted() {
       this.tl = new TimelineMax({})
       this.tl.set('.st0, .st1', { drawSVG: '0% 0%', fill: 'transparent' })
-      this.tl.set('.logo', { opacity: 0, y: -20 })
-      this.tl.set('.brand__head', { y: 20, opacity: 0 })
+      this.tl.set('.logo', { y: -20 })
+      this.tl.set('.brand__head', { y: 20 })
       this.tl.add('start')
       this.tl.to('.brand__head', 1, { y: 0, opacity: 1, ease: 'circ.out' }, 'start')
       this.tl.to('.st0, .st1', 1, { drawSVG: '0% 100%' }, 'start')
       this.tl.to('.logo', 1, { opacity: 1, y: 0, ease: 'circ.out' }, 'start')
       this.tl.to('.st0, .st1', 1, { fill: '#ffffff' })
+      this.tl.staggerTo('.slogan__word', .5, { opacity: 1 }, .2, 'start+=1')
+      this.tl.to('.slogan__text', .5, { opacity: 1 }, 'start+=2')
     }
   }
 </script>
 
 <style lang="scss">
   .main-page {
-    margin: 0 auto;
     width: 100%;
-    height: 100vh;
-    @include flexAlign(center, center);
+    height: calc(100vh - #{$headerHeight});
+    position: absolute;
+    top: $headerHeight;
     text-align: center;
     overflow: hidden;
   }
 
   .main-wrap {
     width: 100%;
+    @include flexAlign(center, center);
   }
 
   .brand {
+    width: 50%;
+    height: calc(100vh - #{$headerHeight});
     position: relative;
     z-index: 10;
     @include flexAlign(center, center, column);
@@ -73,29 +88,54 @@
     &__head {
       font-family: 'Cunia', sans-serif;
       color: $white;
-      font-size: 2em;
+      font-size: 2.5vw;
       margin: 0 20px;
+      opacity: 0;
+    }
+  }
+
+  .slogan-block {
+    width: 50%;
+    height: calc(100vh - #{$headerHeight});
+    @include flexAlign(center, center, column);
+  }
+
+  .slogan {
+    width: 80%;
+
+    &__word {
+      position: relative;
+      width: 100%;
+      text-align: left;
+      opacity: 0;
+      @include fontRusso($white, 2.5vw)
+    }
+
+    &__text {
+      width: 100%;
+      text-align: left;
+      opacity: 0;
+      padding: 10px 0;
+      @include fontExo($white, 1vw)
     }
   }
 
   .logo {
     position: relative;
-    width: 210px;
+    width: 18vw;
+    opacity: 0;
+    z-index: 10;
 
     &-svg {
       width: 100%;
     }
   }
 
-  .st0 {
+  .st0, .st1 {
     fill: #ffffff;
     stroke: #ffffff;
     stroke-width: 1;
-  }
-
-  .st1 {
-    fill: #ffffff;
-    stroke: #ffffff;
-    stroke-width: 1;
+    stroke-dasharray: 1300;
+    stroke-dashoffset: 1300;
   }
 </style>

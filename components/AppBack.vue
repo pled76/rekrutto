@@ -8,11 +8,6 @@
         :d="`M${(sizes.width/12) * (it)} 0 ${(sizes.width/12) * (it)} ${sizes.height}`"
       />
     </svg>
-    <img
-      class="back-logo"
-      :style="{position: 'absolute', left: 0, top: '-40px', opacity: '.1', zIndex: 100, width: '1200px'}"
-      :src="require('assets/images/logo.svg')"
-    />
   </div>
 </template>
 
@@ -35,9 +30,7 @@
       setTimeout(() => {
         this.tl = new TimelineMax({})
         this.tl.set('.line', { drawSVG: '0% 0%'})
-        this.tl.set('.back-logo', { opacity: 0, x: 30})
         this.drawLines()
-        this.tl.to('.back-logo', 1, { opacity: .1, x: 0}, '-=1')
       }, 0)
 
     },
@@ -67,8 +60,17 @@
     height: 100vh;
   }
 
+  .back-logo{
+    position: absolute;
+    left: 0;
+    opacity: .1;
+    z-index: 100;
+    height: 150vh;
+    object-fit: cover;
+  }
+
   .line {
-    stroke: #39393b;
+    stroke: rgba(255,255,255,.3);
     stroke-width: 1;
   }
 </style>

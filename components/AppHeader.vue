@@ -1,8 +1,8 @@
 <template>
   <header class="header">
     <div class="inner">
-      <div class="header-logo">
-        <img :src="require('assets/images/logo.svg')"/>
+      <div class="header-logo" @click="$router.push('/')">
+        <img class="header-logo__image" :src="require('assets/images/logo.svg')"/>
       </div>
       <nav class="nav">
         <ul class="nav__menu">
@@ -20,10 +20,9 @@
     data() {
       return {
         nav: [
-          { name: 'Главная', link: '/' },
-          { name: 'О нас', link: '/about' },
-          { name: 'Почему мы', link: '' },
-          { name: 'Контакты', link: '' },
+          { name: 'Возможности', link: '/opportunities' },
+          { name: 'Почему мы', link: '/why' },
+          { name: 'Контакты', link: '/contacts' },
         ]
       }
     }
@@ -39,8 +38,9 @@
     top: 0;
     left: 0;
     z-index: 100;
-    background: $black;
-    border-bottom: 1px solid #39393b;
+    background: $white;
+    border-bottom: 3px solid $white;
+    box-shadow: $boxShadow;
   }
 
   .inner {
@@ -52,8 +52,18 @@
   }
 
   .header-logo {
-    width: 40px;
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
+    border-radius: 50px;
+    background: $black;
+    @include flexAlign(center, center);
+
+    &__image {
+      width: 30px;
+    }
+
   }
 
   .nav {
@@ -65,15 +75,14 @@
       margin: 0 20px;
 
       &-link {
-        @include fontNun($white, 16px);
-        font-weight: bold;
-        opacity: .2;
+        @include fontExo($black, 16px);
+        opacity: .7;
         text-decoration: none;
-        text-transform: uppercase;
+        text-transform: lowercase;
         transition: opacity .2s;
 
         &:hover {
-          opacity: .4;
+          opacity: 1;
         }
       }
     }

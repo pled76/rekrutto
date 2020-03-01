@@ -10,6 +10,11 @@
   color: $color;
 }
 
+@mixin fontRusso($color, $fontSize) {
+  font-family: 'Russo', sans-serif;
+  font-size: $fontSize;
+  color: $color;
+}
 
 @mixin fontNun($color, $fontSize) {
   font-family: 'Nunito-Regular', sans-serif;

@@ -1,0 +1,15 @@
+.slideIn-enter, .slideIn-leave-to {
+  opacity: 0;
+}
+
+.slideIn-enter-active, .slideIn-leave-active{
+  transition: all .3s ease-in-out;
+}
+
+.scaleXIn-enter, .scaleXIn-leave-to {
+  transform: scaleX(0);
+}
+
+.scaleXIn-enter-active, .scaleXIn-leave-active{
+  transition: transform .1s ease-in-out;
+}

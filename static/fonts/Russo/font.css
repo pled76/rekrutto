@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Russo';
+  src: url('./RussoOne-Regular.eot');
+  src: url('./RussoOne-Regular.eot?#iefix') format('embedded-opentype'),
+       url('./RussoOne-Regular.svg#RussoOne-Regular') format('svg'),
+       url('./RussoOne-Regular.ttf') format('truetype'),
+       url('./RussoOne-Regular.woff') format('woff'),
+       url('./RussoOne-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
