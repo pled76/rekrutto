@@ -2,10 +2,8 @@
   <div class="container">
     <div class="video">
       <div class="video__color"></div>
-      <video class="video__source" autoplay loop muted>
-        <source src="../assets/video/Big-City-Life.mp4">
-        <source src="../assets/video/Big-City-Life.ogv">
-        <source src="../assets/video/Big-City-Life.webm">
+      <video class="video__source" autoplay muted>
+        <source src="../assets/video/rekrutto.mp4">
       </video>
     </div>
     <transition name="slideIn">
