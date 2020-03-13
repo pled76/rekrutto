@@ -138,4 +138,58 @@
     stroke-dasharray: 1300;
     stroke-dashoffset: 1300;
   }
+
+  @media screen and (max-width: 968px) {
+    .main-wrap {
+      width: 100%;
+      @include flexAlign(center, center, column);
+    }
+    .brand, .slogan-block {
+      width: 100%;
+      height: calc(50vh - (#{$headerHeight} / 2));
+
+      &__head {
+        font-family: 'Cunia', sans-serif;
+        color: $white;
+        font-size: 2.5vw;
+        margin: 0 20px;
+        opacity: 0;
+      }
+    }
+
+    .logo {
+      width: 24vw;
+    }
+
+    .slogan-block {
+      @include flexAlign(center, flex-start, column);
+    }
+
+    .slogan {
+      width: 80%;
+
+      &__word {
+        text-align: center;
+        @include fontRusso($white, 24px)
+      }
+
+      &__text {
+        text-align: center;
+        @include fontExo($white, 16px)
+      }
+    }
+  }
+
+  @media screen and (max-width: 440px) {
+    .slogan {
+      &__word {
+        @include fontRusso($white, 18px)
+      }
+
+      &__text {
+        text-align: center;
+        @include fontExo($white, 12px)
+      }
+    }
+  }
 </style>

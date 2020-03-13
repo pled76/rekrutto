@@ -1,5 +1,5 @@
 <template>
-  <div class="about-page">
+  <div class="reasons-page">
     <div class="left-block">
       <h1 class="main-head">Почему мы?</h1>
     </div>
@@ -48,12 +48,13 @@
   }
 </script>
 
-<style lang="scss">
-  .about-page {
+<style lang="scss" scoped>
+  .reasons-page {
     width: 100%;
     height: calc(100vh - #{$headerHeight});
     position: absolute;
     top: $headerHeight;
+    overflow-y: auto;
     @include flexAlign(center, center)
   }
 
@@ -94,6 +95,49 @@
       &-text {
         @include fontExo($white, .8vw);
         text-transform: lowercase;
+      }
+    }
+  }
+  @media screen and (max-width: 968px) {
+    .reasons-page {
+      position: relative;
+      height: auto;
+      @include flexAlign(center, center, column);
+    }
+
+    .left-block, .right-block {
+      width: 100vw;
+      height: calc(50vh - (#{$headerHeight} / 2));
+    }
+
+    .right-block {
+      @include flexAlign(center, flex-start, column);
+    }
+
+    .main-head {
+      @include fontRusso($white, 36px);
+    }
+
+    .reasons {
+      width: 100%;
+      @include flexAlign(flex-start, center);
+
+      &__item {
+        @include flexAlign(center, center, column);
+        flex: 0 0 100%;
+        padding: 0 20px;
+
+        &-head {
+          @include fontRusso($white, 24px);
+          text-transform: uppercase;
+          margin: 10px 0;
+        }
+
+        &-text {
+          @include fontExo($white, 16px);
+          text-transform: lowercase;
+          text-align: center;
+        }
       }
     }
   }
