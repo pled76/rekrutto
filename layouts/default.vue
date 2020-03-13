@@ -2,11 +2,12 @@
   <div class="container">
     <div class="video">
       <div class="video__color"></div>
-      <video class="video__source" autoplay loop muted>
-        <source src="../assets/video/Big-City-Life.mp4">
-        <source src="../assets/video/Big-City-Life.ogv">
-        <source src="../assets/video/Big-City-Life.webm">
+      <video class="video__source" autoplay muted>
+        <source src="../assets/video/rekrutto.mp4">
+<!--        <source src="../assets/video/Big-City-Life.ogv">-->
+<!--        <source src="../assets/video/Big-City-Life.webm">-->
       </video>
+      <img src="../assets/images/Big-City-Life.jpg" alt="">
     </div>
     <transition name="slideIn">
       <AppHeader v-show="showHeader"/>
@@ -44,14 +45,15 @@
     background: $black;
     position: relative;
   }
-  .video{
+
+  .video {
     width: 100%;
     height: 100vh;
     overflow: hidden;
     position: absolute;
     z-index: 0;
 
-    &__color{
+    &__color {
       position: absolute;
       top: 0;
       left: 0;
@@ -61,7 +63,8 @@
       background-blend-mode: multiply;
       filter: chroma(10);
     }
-    &__source{
+
+    &__source {
       width: 100%;
       height: 100%;
       object-fit: cover;
