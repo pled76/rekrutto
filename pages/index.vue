@@ -70,7 +70,7 @@
     position: absolute;
     top: $headerHeight;
     text-align: center;
-    overflow: hidden;
+    overflow-y: auto;
   }
 
   .main-wrap {
@@ -137,5 +137,79 @@
     stroke-width: 1;
     stroke-dasharray: 1300;
     stroke-dashoffset: 1300;
+  }
+
+  @media screen and(orientation: landscape) and(max-width: 968px) {
+    .brand{
+      min-height: 350px;
+    }
+  }
+
+  @media screen and (max-width: 968px) {
+    .main-wrap {
+      width: 100%;
+      @include flexAlign(center, flex-start, column);
+    }
+    .brand, .slogan-block {
+      width: 100%;
+      height: calc(50vh - (#{$headerHeight} / 2));
+
+      &__head {
+        font-family: 'Cunia', sans-serif;
+        color: $white;
+        font-size: 30px;
+        margin: 0 20px;
+        opacity: 0;
+      }
+    }
+
+    .logo {
+      width: 200px;
+    }
+
+    .slogan-block {
+      @include flexAlign(center, flex-start, column);
+    }
+
+    .slogan {
+      width: 80%;
+
+      &__word {
+        text-align: center;
+        @include fontRusso($white, 36px)
+      }
+
+      &__text {
+        text-align: center;
+        @include fontExo($white, 24px)
+      }
+    }
+  }
+
+  @media screen and (max-width: 440px) {
+    .logo {
+      width: 120px;
+    }
+
+    .brand {
+      height: 220px;
+      &__head {
+        font-size: 20px;
+      }
+    }
+    .slogan-block {
+      height: 220px;
+      @include flexAlign(center, center, column);
+    }
+    .slogan {
+      &__word {
+        @include fontRusso($white, 18px)
+      }
+
+      &__text {
+        text-align: center;
+        @include fontExo($white, 12px)
+      }
+    }
   }
 </style>
