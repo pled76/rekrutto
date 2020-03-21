@@ -31,8 +31,9 @@
       return {
         nav: [
           { name: 'Возможности', link: '/opportunities' },
-          { name: 'Почему мы', link: '/why' },
-          { name: 'Контакты', link: '/contacts' },
+          { name: 'Как это работает?', link: '/howitworks' },
+          { name: 'Сколько стоит?', link: '/howmuch' },
+          { name: 'Кто мы', link: '/whoarewe' },
         ],
         show: false
       }

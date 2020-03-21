@@ -1,7 +1,7 @@
 <template>
   <div class="data-page">
     <div class="left-block">
-      <h1 class="main-head">Возможности приложения</h1>
+      <h1 class="main-head">Как это работает?</h1>
     </div>
     <div class="right-block">
       <ul class="data">
@@ -16,7 +16,7 @@
 
 <script>
   import { Power1 } from '../plugins/gsap/esm'
-  import data from '../schemes/opportunities'
+  import data from '../schemes/howitworks'
 
   export default {
     transition: {
