@@ -1,10 +1,10 @@
 <template>
-  <DataPage mainHead="Возможности приложения" :mainData="pageData" ></DataPage>
+  <DataPage mainHead="" :mainData="pageData" ></DataPage>
 </template>
 
 <script>
   import DataPage from '../components/elements/DataPage'
-  import pageData from '../schemes/opportunities'
+  import pageData from '../schemes/product'
 
   export default {
 

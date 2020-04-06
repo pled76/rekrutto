@@ -20,7 +20,7 @@
         <div class="slogan">
           <div class="slogan__word">Система автоматизации</div>
           <div class="slogan__word">подбора персонала</div>
-          <p class="slogan__text">для тех, кто ценит свое время</p>
+          <p class="slogan__text golden">для тех, кто ценит свое время</p>
         </div>
       </div>
     </div>
@@ -116,7 +116,7 @@
       text-align: left;
       opacity: 0;
       padding: 10px 0;
-      @include fontExo($white, 1vw)
+      @include fontExo($white, 1.5vw)
     }
   }
 
@@ -183,6 +183,16 @@
         text-align: center;
         @include fontExo($white, 24px)
       }
+    }
+  }
+
+  @media screen and (max-height: 700px) {
+    .brand {
+      display: none
+    }
+
+    .slogan-block {
+      height: calc(100vh - #{$headerHeight})
     }
   }
 

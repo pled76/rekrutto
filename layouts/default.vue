@@ -5,7 +5,6 @@
       <video class="video__source" autoplay muted>
         <source src="../assets/video/rekrutto.mp4">
       </video>
-      <img src="../assets/images/Big-City-Life.jpg" alt="">
     </div>
     <transition name="slideIn">
       <AppHeader v-show="showHeader"/>

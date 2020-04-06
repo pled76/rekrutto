@@ -13,13 +13,15 @@
           c0-2,1.6-3.6,3.6-3.6c5,0,13.6,0,14,0c12,0,14.9,9,14.8,19.6C74.1,57.2,70.1,65.9,59,65.9z"/>
         </svg>
       </div>
-      <h1 class="brand__head">Rekrutto</h1>
+      <h1 v-if="!disableBrandHead" class="brand__head">Rekrutto</h1>
     </div>
   </div>
 </template>
 
 <script>
   export default {
+    props: ['disableBrandHead'],
+
     components: {},
 
     data() {
@@ -45,6 +47,10 @@
 <style lang="scss">
   .main-wrap {
     width: 100%;
+  }
+
+  .golden {
+    color: $gold;
   }
 
   .brand {

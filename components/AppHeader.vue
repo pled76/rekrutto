@@ -2,7 +2,7 @@
   <header class="header">
     <div class="inner">
       <div class="header-logo" @click="$router.push('/')">
-        <img class="header-logo__image" :src="require('assets/images/logo.svg')"/>
+        <span>Rekrutto</span>
       </div>
       <transition>
         <nav :class="['nav', {'show-nav': show}]">
@@ -30,6 +30,7 @@
     data() {
       return {
         nav: [
+          { name: 'Продукт', link: '/product' },
           { name: 'Возможности', link: '/opportunities' },
           { name: 'Как это работает?', link: '/howitworks' },
           { name: 'Сколько стоит?', link: '/howmuch' },
@@ -78,20 +79,8 @@
   }
 
   .header-logo {
-    position: absolute;
-    z-index: 9999;
-    flex: 0 0 60px;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    border-radius: 50px;
-    background: $black;
     @include flexAlign(center, center);
-
-    &__image {
-      width: 30px;
-    }
-
+    @include fontRusso($black, 24px)
   }
 
   .nav {
