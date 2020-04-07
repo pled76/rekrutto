@@ -102,8 +102,9 @@
       }
 
       &-text {
-        @include fontExo($white, 1.5vw);
+        @include fontExo($white, 1vw);
         text-transform: lowercase;
+        margin-top: 10px;
       }
     }
   }

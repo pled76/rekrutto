@@ -20,7 +20,7 @@
     },
 
     mounted () {
-      backend.readData('InfoMyRoles', this.$store)
+      backend.readData('InfoMyRoles?q=EQID:1', this.$store)
       .then(resp => {
         console.log(resp.data)
       })

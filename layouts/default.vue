@@ -2,7 +2,7 @@
   <div class="container">
     <div class="video">
       <div class="video__color"></div>
-      <video class="video__source" autoplay muted>
+      <video class="video__source" autoplay muted loop>
         <source src="../assets/video/rekrutto.mp4">
       </video>
     </div>
