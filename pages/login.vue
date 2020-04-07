@@ -1,8 +1,8 @@
 <template>
   <FormPage>
     <form>
-      <input ref="login" @keyup.enter="doLogin()" />
-      <input ref="pwd" type="password" @keyup.enter="doLogin()" />
+      <input v-model="login" autocomplete="username" @keyup.enter="doLogin()" />
+      <input v-model="pwd" autocomplete="current-password" type="password" @keyup.enter="doLogin()" />
     </form>
     <button @click="doLogin()" >Войти</button>
   </FormPage>
@@ -15,16 +15,22 @@
   export default {
     data() {
       return {
+        login: '',
+        pwd: '',
         backend
       }
     },
     methods: {
       doLogin() {
-        backend.doLogin(this.$refs.login.value, this.$refs.pwd.value, this.$store)
-        if (this.$store.state.isLoggedIn) {
-          this.$refs.login.value = ''
-          this.$refs.pwd.value = ''
-        }
+        backend.doLogin(this.login, this.pwd, this.$store)
+          .then(() => {
+            if (this.$store.state.isLoggedIn) {
+              this.$nextTick(() => {
+                this.login = ''
+                this.pwd = ''
+              })
+            }            
+          })
       }
     },
     components: { FormPage }

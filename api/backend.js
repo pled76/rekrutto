@@ -5,7 +5,7 @@ export default {
   useBack: 'https://test-i-staff.pled76.ru',
 
   doLogin(usr, pwd, store) {
-    axios.post(this.useBack + '/login', { login: usr, password: pwd })
+    return axios.post(this.useBack + '/login', { login: usr, password: pwd })
       .then(() => {
         store.commit('login', usr)
       })

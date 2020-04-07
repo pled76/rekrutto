@@ -62,13 +62,13 @@
 <style lang="scss">
   form {
     @include flexAlign(center, center, column)
-    @include fontExo($black, 2vw)
   }
 
   form input, button {
     margin-top: 10px;
     padding: 5px;
     border-radius: 7px;
+    @include fontExo($black, 2vw)
   }
 
   .main-page {
