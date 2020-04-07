@@ -15,8 +15,8 @@
 </template>
 
 <script>
-  import { Power1 } from '../../plugins/gsap/esm'
-  import AppMain from '../AppMain'
+  import { Power1 } from '../plugins/gsap/esm'
+  import AppMain from './AppMain'
 
   export default {
     props: ['mainHead', 'mainData'],

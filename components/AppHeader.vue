@@ -7,7 +7,7 @@
       <transition>
         <nav :class="['nav', {'show-nav': show}]">
           <ul class="nav__menu">
-            <li class="nav__item" v-for="it in nav" :key="it.name">
+            <li class="nav__item" v-for="it in navMenu" :key="it.name">
               <nuxt-link @click.native="closeNav" class="nav__item-link" exact :to="it.link">{{it.name}}</nuxt-link>
             </li>
           </ul>
@@ -34,7 +34,7 @@
           { name: 'Возможности', link: '/opportunities' },
           { name: 'Как это работает?', link: '/howitworks' },
           { name: 'Сколько стоит?', link: '/howmuch' },
-          { name: 'Кто мы', link: '/whoarewe' },
+          { name: 'Кто мы', link: '/whoarewe' }
         ],
         show: false
       }
@@ -49,6 +49,21 @@
         if (this.show) {
           this.show = false
         }
+      }
+    },
+
+    computed: {
+      navMenu () {
+        return this.nav.concat(
+          this.$store.state.isLoggedIn
+          ? {
+            name: this.$store.state.user,
+            link: '/profile'
+          }
+          : {
+            name: 'Войти',
+            link: '/login'
+          })
       }
     }
   }

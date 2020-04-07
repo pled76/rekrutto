@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import DataPage from '../components/elements/DataPage'
+  import DataPage from '../components/DataPage'
   import pageData from '../schemes/opportunities'
 
   export default {
