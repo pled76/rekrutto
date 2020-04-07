@@ -71,6 +71,6 @@
 
   .line {
     stroke: rgba(255,255,255,.3);
-    stroke-width: 1;
+    stroke-width: 0;
   }
 </style>
