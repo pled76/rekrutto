@@ -1,7 +1,7 @@
 <template>
   <div class="data-page">
     <div class="left-block">
-      <AppMain disableBrandHead="true"></AppMain>
+      <AppMain :disableBrandHead="mainHead" :mainHead="mainHead" :useSvg="useSvg"></AppMain>
     </div>
     <div class="right-block">
       <ul class="data">
@@ -19,7 +19,7 @@
   import AppMain from './AppMain'
 
   export default {
-    props: ['mainHead', 'mainData'],
+    props: ['mainHead', 'mainData', 'useSvg'],
 
     transition: {
       css: false,

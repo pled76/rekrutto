@@ -35,6 +35,10 @@
 <style lang="scss">
   @import "assets/scss/main";
 
+  .golden {
+    color: $gold;
+  }
+
   .container {
     width: 100%;
     height: 100vh;

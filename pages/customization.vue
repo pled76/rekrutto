@@ -1,10 +1,10 @@
 <template>
-  <DataPage :mainData="pageData" ></DataPage>
+  <DataPage mainHead="Кастомизация" :mainData="pageData" useSvg="Кастомизация" ></DataPage>
 </template>
 
 <script>
   import DataPage from '../components/DataPage'
-  import pageData from '../schemes/product'
+  import pageData from '../schemes/customization'
 
   export default {
 

@@ -1,5 +1,5 @@
 <template>
-  <DataPage mainHead="" :mainData="pageData" ></DataPage>
+  <DataPage mainHead="Продукт" :mainData="pageData" ></DataPage>
 </template>
 
 <script>

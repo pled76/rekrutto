@@ -30,7 +30,6 @@
     data() {
       return {
         nav: [
-          { name: 'Продукт', link: '/product' },
           { name: 'Возможности', link: '/opportunities' },
           { name: 'Как это работает?', link: '/howitworks' },
           { name: 'Сколько стоит?', link: '/howmuch' },
