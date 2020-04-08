@@ -1,5 +1,5 @@
 <template>
-  <DataPage mainHead="Как это работает?" :mainData="pageData" ></DataPage>
+  <DataPage mainHead="Сколько это стоит?" :mainData="pageData" ></DataPage>
 </template>
 
 <script>
