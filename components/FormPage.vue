@@ -59,7 +59,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   form {
     @include flexAlign(center, center, column)
   }
