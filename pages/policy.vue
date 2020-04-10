@@ -14,6 +14,10 @@
       }
     },
 
+    mounted () {
+      document.getElementById('policyref').click();
+    },
+
     components: { DataPage }
   }
 </script>

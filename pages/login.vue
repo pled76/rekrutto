@@ -24,7 +24,7 @@
         </div>
       </form>
       <button @click="doLogin()" >Войти</button>
-      <div class="form__title golden">ВМЕСТЕ МЫ МОЖЕМ БОЛЬШЕ</div>
+      <div class="form__title golden large_text">ВМЕСТЕ МЫ МОЖЕМ БОЛЬШЕ</div>
     </div>
   </FormPage>
 </template>
@@ -60,6 +60,14 @@
 
 
 <style lang="scss" scoped>
+  form input {
+    @include fontExo($white, 1.5vw)
+  }
+
+  div button {
+    @include fontExo($black, 1.5vw)
+  }
+
   .one__col {
     width: 100%;
     padding-bottom: 2em;
@@ -79,5 +87,9 @@
   .form__title {
     padding-top: 2em;
     padding-bottom: 1em;
+  }
+
+  .large_text {
+    @include fontExo($white, 1.5em)
   }
 </style>
