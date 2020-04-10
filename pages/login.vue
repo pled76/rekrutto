@@ -92,4 +92,14 @@
   .large_text {
     @include fontExo($white, 1.5em)
   }
+
+  @media screen and (max-width: 968px) {
+    .one__col {
+      @include fontExo($white, 1.5vh)
+    }
+
+    .row {
+      @include flexAlign(baseline, center, column)
+    }
+  }
 </style>
