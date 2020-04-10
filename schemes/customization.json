@@ -27,5 +27,8 @@
   },
   {
     "title": "<a class=\"golden\" href=\"requestCustom\">Запросить кастомизацию</a>"
+  },
+  {
+    "title": "<a class=\"golden\" href=\"/compliance\">ещё возможности ...</a>"
   }
 ]
