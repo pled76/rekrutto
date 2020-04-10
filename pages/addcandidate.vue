@@ -1,5 +1,5 @@
 <template>
-  <DataPage mainHead="Добавить резюме" :mainData="pageData" ></DataPage>
+  <DataPage mainHead="Добавить резюме" :mainData="pageData" useSvg="Добавить резюме" ></DataPage>
 </template>
 
 <script>
