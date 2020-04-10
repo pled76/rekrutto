@@ -109,7 +109,7 @@
     }
   }
 
-  @media screen and (max-width: 968px) {
+  @media screen and (max-width: 968px) and (min-height: 780px) {
     .data-page {
       position: relative;
       height: auto;
@@ -153,13 +153,49 @@
     }
   }
 
-  @media screen and (max-height: 560px) {
+  @media screen and (max-height: 780px) {
     .left-block {
-      display: none
+      display: none;
     }
 
     .right-block {
-      height: calc(100vh - #{$headerHeight})
+      height: calc(100vh - #{$headerHeight});
+      width: 100%;
+      @include flexAlign(center, flex-start, column);
+    }
+
+    .data-page {
+      position: relative;
+      height: auto;
+      @include flexAlign(center, center, column);
+    }
+
+    .main-head {
+      @include fontRusso($white, 36px);
+    }
+
+    .data {
+      width: 100%;
+      @include flexAlign(flex-start, center);
+
+      &__item {
+        @include flexAlign(center, center, column);
+        flex: 0 0 100%;
+        padding: 0 20px;
+
+        &-head {
+          @include fontRusso($white, 24px);
+          text-transform: uppercase;
+          margin: 10px 0;
+        }
+
+        &-text {
+          @include fontExo($white, 16px);
+          text-transform: lowercase;
+          text-align: center;
+        }
+      }
     }
   }
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <DataPage mainHead="Безопасность" :mainData="pageData" ></DataPage>
+  <DataPage mainHead="Безопасность" :mainData="pageData" useSvg="Закон" ></DataPage>
 </template>
 
 <script>
