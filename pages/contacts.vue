@@ -5,12 +5,9 @@
     </div>
     <div class="right-block">
       <ul name="slideIn" class="contacts">
-        <li class="contacts__item">
-          <h2 class="contacts__item-head logo-head">rekrutto</h2>
-        </li>
         <li class="contacts__item" v-for="it in contacts" :key="it.title">
-          <h2 class="contacts__item-head">{{it.title}}</h2>
-          <p class="contacts__item-text">{{it.value}}</p>
+          <h2 class="contacts__item-head"><span v-html="it.title"></span></h2>
+          <h2 class="contacts__item-head"><span v-html="it.value"></span></h2>
         </li>
       </ul>
     </div>

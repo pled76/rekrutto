@@ -33,7 +33,7 @@
           { name: 'Возможности', link: '/mobility' },
           { name: 'Как это работает?', link: '/howitworks' },
           { name: 'Сколько стоит?', link: '/howmuch' },
-          { name: 'Кто мы', link: '/whoarewe' }
+          { name: 'Контакты', link: '/contacts' }
         ],
         show: false
       }

@@ -1,14 +1,14 @@
 [
   {
-    "title": "адрес",
-    "value": "Москва"
+    "title": "Общие вопросы",
+    "value": "<a class='golden' href='mailto:info@rekrutto.ru'>info@rekrutto.ru</a>"
   },
   {
-    "title": "телефон",
-    "value": "8-800-200#@#@"
+    "title": "Кастомизация",
+    "value": "<a class='golden' href='mailto:mc@rekrutto.ru'>mc@rekrutto.ru</a>"
   },
   {
-    "title": "email",
-    "value": "INFO@REKRUTTO.RU"
+    "title": "Поддержка",
+    "value": "<a class='golden' href='mailto:support@rekrutto.ru'>support@rekrutto.ru</a>"
   }
 ]
