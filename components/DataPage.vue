@@ -153,7 +153,7 @@
     }
   }
 
-  @media screen and (max-height: 780px) {
+  @media screen and (max-height: 780px) and (orientation: portrait) {
     .left-block {
       display: none;
     }
