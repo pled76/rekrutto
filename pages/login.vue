@@ -50,8 +50,10 @@
               this.$nextTick(() => {
                 this.login = ''
                 this.pwd = ''
+                this.$router.push('/')
               })
             }
+            return this.$store.state.isLoggedIn
           })
       }
     },

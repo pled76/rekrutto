@@ -1,12 +1,10 @@
 <template>
   <FormPage>
-    <div class="slogan">
-      <div class="slogan__word">Система автоматизации</div>
-      <div class="slogan__word">подбора персонала</div>
-      <p class="golden slogan__text">для тех, кто ценит свое время</p>
-    </div>
     <div v-if="isLoggedIn()" class="slogan">
-      <p class="golden slogan__text" @click="logout()">выйти из системы</p>
+      <p class="golden slogan__text" @click="logout()"><a class="golden" href="#">выйти из системы</a></p>
+    </div>
+    <div v-else class="slogan">
+      <p class="golden slogan__text"><a class="golden" href="/login">войти</a></p>
     </div>
   </FormPage>
 </template>
