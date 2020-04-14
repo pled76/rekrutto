@@ -14,13 +14,11 @@ const store = () => new Vuex.Store({
     login (st, usr) {
       st.isLoggedIn = true
       st.user = usr
-      console.log('STORE login', st)
     },
 
     logout (st) {
       st.isLoggedIn = false
       st.user = ''
-      console.log('STORE logout', st)
     }
   }
 })

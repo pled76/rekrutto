@@ -33,7 +33,7 @@
       return {
         backend,
         nav: [
-          { name: 'Возможности', link: '/mobility' },
+          { name: 'Возможности', link: '/opportunities' },
           { name: 'Как это работает?', link: '/howitworks' },
           { name: 'Сколько стоит?', link: '/howmuch' },
           { name: 'Контакты', link: '/contacts' }

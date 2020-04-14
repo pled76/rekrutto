@@ -9,6 +9,18 @@
           <h2 class="contacts__item-head"><span v-html="it.title"></span></h2>
           <h2 class="contacts__item-head"><span v-html="it.value"></span></h2>
         </li>
+        <li class="contacts__item">
+          <p class="contacts__item-head">ООО&nbsp;"РЕКРУТТО"</p>
+        </li>
+        <li class="contacts__item">
+          <p class="contacts__item-text">ОГРН&nbsp;1207700148996&nbsp;от&nbsp;02.04.2020</p>
+        </li>
+        <li class="contacts__item">
+          <p class="contacts__item-text">ИНН:&nbsp;7720642082</p>
+        </li>
+        <li class="contacts__item">
+          <p class="contacts__item-text">КПП:&nbsp;772001001</p>
+        </li>
       </ul>
     </div>
   </div>
