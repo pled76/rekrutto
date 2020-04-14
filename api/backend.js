@@ -24,6 +24,23 @@ export default {
     axios.get(this.useBack + '/logout')
   },
 
+  readToken() {
+    if (!this.tokenPromise)
+      this.tokenPromise = axios.get(this.useBack + '/token')
+    return this.tokenPromise
+  },
+
+  whoami() {
+    return axios.get(this.useBack + '/whoami')
+  },
+
+  checkLogin(vx) {
+    return this.readToken()
+      .then(() => this.whoami())
+      .then(resp => vx.commit('login', resp.data))
+      .catch(() => vx.commit('logout'))
+  },
+
   readData(bo, store) {
     if (!store.state.isLoggedIn || !this.tokenPromise)
       return Promise.reject(new Error('not loged in'))
@@ -31,6 +48,16 @@ export default {
       .then(resp => {
         console.log(resp)
         axios.get(this.useBack + '/data/' + bo)
+      })
+  },
+
+  openAt(bo, title, qry) {
+    if (!bo) return Promise.reject(new Error('no redirect link specified'))
+    let t = title ? '?t=' + title : ''
+    let q = qry ? (t ? '&q=' + qry : '?q=' + qry) : ''
+    return axios.get(this.useBack + '/redirect/' + bo + t + q)
+      .then(() => {
+        window.open(this.useBack, '_blank')
       })
   }
 }

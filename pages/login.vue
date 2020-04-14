@@ -3,13 +3,13 @@
     <div class="one__col">
       <div class="row">
         <div class="one__col">
-          <div class="form__title">РЕГИСТРАЦИЯ</div>
+          <div class="form__title golden">РЕГИСТРАЦИЯ</div>
           <div>Введите адрес своей корпоративной почты и придумайте ПАРОЛЬ. Запомните или сохраните его.</div>
           <br>
           <div>Далее необходимо просто пройти по ссылке, которую вы получите на указанную почту и Ваш аккаунт ГОТОВ!</div>
         </div>
         <div class="one__col">
-          <div class="form__title">ВХОД В СИСТЕМУ</div>
+          <div class="form__title golden">ВХОД В СИСТЕМУ</div>
           <div>Введите адрес своей корпоративной почты</div>
           <br>
           <div>Введите ранее указанный пароль</div>
@@ -41,6 +41,7 @@
         backend
       }
     },
+
     methods: {
       doLogin() {
         backend.doLogin(this.login, this.pwd, this.$store)
@@ -61,7 +62,7 @@
 
 <style lang="scss" scoped>
   form input {
-    @include fontExo($white, 1.5vw)
+    @include fontExo($black, 1.5vw)
   }
 
   div button {
@@ -90,7 +91,7 @@
   }
 
   .large_text {
-    @include fontExo($white, 1.5em)
+    @include fontExo($gold, 1.5em)
   }
 
   @media screen and (max-width: 968px) {

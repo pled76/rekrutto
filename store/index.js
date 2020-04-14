@@ -9,15 +9,18 @@ const store = () => new Vuex.Store({
     isLoggedIn: false,
     user: ''
   },
+
   mutations: {
-    login (state, usr) {
-      state.isLoggedIn = true
-      state.user = usr
+    login (st, usr) {
+      st.isLoggedIn = true
+      st.user = usr
+      console.log('STORE login', st)
     },
 
-    logout (state) {
-      state.isLoggedIn = false
-      state.user = ''
+    logout (st) {
+      st.isLoggedIn = false
+      st.user = ''
+      console.log('STORE logout', st)
     }
   }
 })

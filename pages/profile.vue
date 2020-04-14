@@ -3,7 +3,10 @@
     <div class="slogan">
       <div class="slogan__word">Система автоматизации</div>
       <div class="slogan__word">подбора персонала</div>
-      <p class="slogan__text golden">для тех, кто ценит свое время</p>
+      <p class="golden slogan__text">для тех, кто ценит свое время</p>
+    </div>
+    <div v-if="isLoggedIn()" class="slogan">
+      <p class="golden slogan__text" @click="logout()">выйти из системы</p>
     </div>
   </FormPage>
 </template>
@@ -26,8 +29,17 @@
       })
       .catch(e => {
         console.log(e)
-        this.$router.push('/login')
       })
+    },
+
+    methods: {
+      logout() {
+        this.backend.doLogout(this.$store)
+      },
+
+      isLoggedIn () {
+        return this.$store.state.isLoggedIn
+      }
     },
 
     components: { FormPage }

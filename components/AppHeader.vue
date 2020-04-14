@@ -22,13 +22,16 @@
 
 <script>
   import VHamburger from '@/components/elements/VHamburger'
+  import backend from '@/api/backend'
 
   export default {
     components: {
       VHamburger
     },
+
     data() {
       return {
+        backend,
         nav: [
           { name: 'Возможности', link: '/mobility' },
           { name: 'Как это работает?', link: '/howitworks' },
@@ -37,6 +40,10 @@
         ],
         show: false
       }
+    },
+
+    created() {
+      this.backend.checkLogin(this.$store)
     },
 
     methods: {
