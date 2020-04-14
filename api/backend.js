@@ -4,7 +4,7 @@ axios.defaults.withCredentials = true
 
 export default {
 
-  useBack: 'https://test-i-staff.pled76.ru',
+  useBack: 'https://beta-app.rekrutto.ru',
   tokenPromise: null,
 
   doLogin(usr, pwd, store) {
