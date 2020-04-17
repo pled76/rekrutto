@@ -1,14 +1,14 @@
 <template>
   <FormPage>
-    <div class="one__col">
+    <div class="one__col from__top">
       <div class="row">
-        <div class="one__col">
+        <div class="one__col half__width">
           <div class="form__title golden">РЕГИСТРАЦИЯ</div>
           <div>Введите адрес своей корпоративной почты и придумайте ПАРОЛЬ. Запомните или сохраните его.</div>
           <br>
           <div>Далее необходимо просто пройти по ссылке, которую вы получите на указанную почту и Ваш аккаунт ГОТОВ!</div>
         </div>
-        <div class="one__col">
+        <div class="one__col half__width">
           <div class="form__title golden">ВХОД В СИСТЕМУ</div>
           <div>Введите адрес своей корпоративной почты</div>
           <br>
@@ -23,7 +23,9 @@
           <input v-model="pwd" placeholder="Пароль" autocomplete="current-password" type="password" @keyup.enter="doLogin()" />
         </div>
       </form>
-      <button @click="doLogin()" >Войти</button>
+      <div class="one_col">
+        <button @click="doLogin()" >Войти</button>
+      </div>
       <div class="form__title golden large_text">ВМЕСТЕ МЫ МОЖЕМ БОЛЬШЕ</div>
     </div>
   </FormPage>
@@ -72,18 +74,20 @@
   }
 
   .one__col {
-    width: 100%;
-    padding-bottom: 2em;
-    padding-left: 2em;
-    text-align: left;
     @include flexAlign(center, center, column)
     @include fontExo($white, 1.5vw)
   }
 
+  .half__width {
+    width: 50%;
+  }
+
+  .from__top {
+    position: relative;
+    top: #{$headerHeight};
+  }
+
   .row {
-    width: 100%;
-    padding-right: 2em;
-    text-align: left;
     @include flexAlign(baseline, center)
   }
 
@@ -102,7 +106,13 @@
     }
 
     .row {
-      @include flexAlign(baseline, center, column)
+      @include flexAlign(center, center, column)
+    }
+  }
+
+  @media screen and (max-height: 500px) {
+    .from__top {
+      top: 2em;
     }
   }
 </style>
