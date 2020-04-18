@@ -57,7 +57,7 @@ export default {
     let q = qry ? (t ? '&q=' + qry : '?q=' + qry) : ''
     return axios.get(this.useBack + '/redirect/' + bo + t + q)
       .then(() => {
-        window.open(this.useBack, '_blank')
+        window.open(this.useBack, '_self')
       })
   }
 }
