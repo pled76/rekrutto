@@ -53,6 +53,7 @@
                 this.login = ''
                 this.pwd = ''
                 this.$router.push('/')
+                this.backend.openAt()
               })
             }
             return this.$store.state.isLoggedIn

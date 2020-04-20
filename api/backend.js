@@ -52,12 +52,16 @@ export default {
   },
 
   openAt(bo, title, qry) {
-    if (!bo) return Promise.reject(new Error('no redirect link specified'))
+    const typ = '_self'
+    if (!bo) {
+      window.open(this.useBack, typ)
+      return Promise.resolve(true);
+    }
     let t = title ? '?t=' + title : ''
     let q = qry ? (t ? '&q=' + qry : '?q=' + qry) : ''
     return axios.get(this.useBack + '/redirect/' + bo + t + q)
       .then(() => {
-        window.open(this.useBack, '_self')
+        window.open(this.useBack, typ)
       })
   }
 }

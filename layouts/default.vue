@@ -1,11 +1,5 @@
 <template>
   <div class="container">
-    <div class="video">
-      <div class="video__color"></div>
-      <video class="video__source" autoplay muted loop>
-        <source src="../assets/video/rekrutto.mp4">
-      </video>
-    </div>
     <transition name="slideIn">
       <AppHeader v-show="showHeader"/>
     </transition>
@@ -43,7 +37,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: $black;
+    background: $brown;
     position: relative;
   }
 

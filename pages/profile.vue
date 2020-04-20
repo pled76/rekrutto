@@ -1,7 +1,13 @@
 <template>
   <FormPage>
+    <div class="slogan">
+      <p class="golden slogan__text"><a class="golden" href="/startwork">Приступить к работе</a></p>
+    </div>
+    <div class="slogan">
+      <p class="golden slogan__text"><a class="golden" href="/Инструкции.pdf">Инструкции</a></p>
+    </div>
     <div v-if="isLoggedIn()" class="slogan">
-      <p class="golden slogan__text" @click="logout()"><a class="golden" href="#">выйти из системы</a></p>
+      <p class="golden slogan__text" @click="logout()"><a class="golden" href="#">Выйти из системы</a></p>
     </div>
     <div v-else class="slogan">
       <p class="golden slogan__text"><a class="golden" href="/login">войти</a></p>
@@ -43,3 +49,12 @@
     components: { FormPage }
   }
 </script>
+
+
+<style lang="scss" scoped>
+
+.slogan__text {
+  padding-bottom: 2em;
+}
+
+</style>
