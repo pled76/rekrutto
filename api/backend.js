@@ -14,8 +14,9 @@ export default {
         this.tokenPromise = axios.get(this.useBack + '/token')
         store.commit('login', usr)
       })
-      .catch(() => {
+      .catch(e => {
         store.commit('logout')
+        return Promise.reject(e)
       })
   },
 
