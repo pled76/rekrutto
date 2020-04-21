@@ -20,10 +20,16 @@
           <input v-model="login" placeholder="Адрес рабочей почты" autocomplete="username" @keyup.enter="doLogin()" />
         </div>
         <div class="row">
-          <input v-model="pwd" placeholder="Пароль" autocomplete="current-password" type="password" @keyup.enter="doLogin()" />
+          <input v-model="pwd" placeholder="Пароль" autocomplete="current-password" :type="pwdType" @keyup.enter="doLogin()" />
+        </div>
+        <div class="row">
+          <p class="little__text" @click="pwdShowHide()">{{showHidePwd}}</p>
         </div>
       </form>
       <div class="one_col">
+        <div v-if="loginError" class="row red__text">
+          {{loginError}}
+        </div>
         <button @click="doLogin()" >Войти</button>
       </div>
       <div class="form__title golden large_text">ВМЕСТЕ МЫ МОЖЕМ БОЛЬШЕ</div>
@@ -40,12 +46,16 @@
       return {
         login: '',
         pwd: '',
-        backend
+        backend,
+        pwdType: 'password',
+        showHidePwd: 'показать пароль',
+        loginError: ''
       }
     },
 
     methods: {
       doLogin() {
+        this.loginError = ''
         backend.doLogin(this.login, this.pwd, this.$store)
           .then(() => {
             if (this.$store.state.isLoggedIn) {
@@ -58,6 +68,19 @@
             }
             return this.$store.state.isLoggedIn
           })
+          .catch(e => {
+            this.loginError = e.response.data
+          })
+      },
+
+      pwdShowHide() {
+        if (this.pwdType) {
+          this.pwdType = ''
+          this.showHidePwd = 'скрыть пароль'
+        } else {
+          this.pwdType = 'password'
+          this.showHidePwd = 'показать пароль'
+        }
       }
     },
     components: { FormPage }
@@ -72,6 +95,16 @@
 
   div button {
     @include fontExo($black, 1.5vw)
+  }
+
+  .little__text {
+    @include fontExo($white, 0.7em)
+  }
+
+  .red__text {
+    color: $red;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   .one__col {
