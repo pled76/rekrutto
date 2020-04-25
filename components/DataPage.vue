@@ -103,7 +103,7 @@
 
       &-text {
         @include fontExo($white, 1vw);
-        text-transform: lowercase;
+        // text-transform: lowercase;
         margin-top: 10px;
       }
     }
@@ -146,7 +146,7 @@
 
         &-text {
           @include fontExo($white, 16px);
-          text-transform: lowercase;
+          // text-transform: lowercase;
           text-align: center;
         }
       }
@@ -191,7 +191,7 @@
 
         &-text {
           @include fontExo($white, 16px);
-          text-transform: lowercase;
+          // text-transform: lowercase;
           text-align: center;
         }
       }

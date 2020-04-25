@@ -23,14 +23,23 @@
           <input v-model="pwd" placeholder="Пароль" autocomplete="current-password" :type="pwdType" @keyup.enter="doLogin()" />
         </div>
         <div class="row">
-          <p class="little__text" @click="pwdShowHide()">{{showHidePwd}}</p>
+          <a href="#" class="little__text" @click="pwdShowHide()">{{showHidePwd}}</a>
         </div>
       </form>
       <div class="one_col">
         <div v-if="loginError" class="row red__text">
           {{loginError}}
         </div>
-        <button @click="doLogin()" >Войти</button>
+        <button v-if="confirmed" @click="doLogin()" >Войти</button>
+        <div class="row pad__top">
+          <a class="golden" href="/policy">Политика использования ПД</a>
+        </div>
+        <div class="row pad__top">
+          <a class="golden" href="#" @click="confirmed = !confirmed">{{ confirmText }}</a>
+        </div>
+        <div class="row">
+          <a href="/confirmation" class="little__text">своё согласие с политикой использования ПД</a>
+        </div>
       </div>
       <div class="form__title golden large_text">ВМЕСТЕ МЫ МОЖЕМ БОЛЬШЕ</div>
     </div>
@@ -49,7 +58,8 @@
         backend,
         pwdType: 'password',
         showHidePwd: 'показать пароль',
-        loginError: ''
+        loginError: '',
+        confirmed: false
       }
     },
 
@@ -83,6 +93,13 @@
         }
       }
     },
+
+    computed: {
+      confirmText () {
+        return (this.confirmed ? 'Отозвать' : 'Подтвердить')
+      }
+    },
+
     components: { FormPage }
   }
 </script>
@@ -95,6 +112,10 @@
 
   div button {
     @include fontExo($black, 1.5vw)
+  }
+
+  .pad__top {
+    padding-top: 1em;
   }
 
   .little__text {
