@@ -2,7 +2,7 @@
   <header class="header">
     <div class="inner">
       <div class="header-logo" @click="$router.push('/')">
-        <span>Rekrutto</span>
+        <span>Rekrutto</span><span class="golden">.change</span>
       </div>
       <transition>
         <nav :class="['nav', {'show-nav': show}]">
