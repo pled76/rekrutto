@@ -132,22 +132,26 @@
     .data {
       width: 100%;
       @include flexAlign(flex-start, center);
+      text-align: left;
 
       &__item {
         @include flexAlign(center, center, column);
         flex: 0 0 100%;
         padding: 0 20px;
+        text-align: left;
 
         &-head {
           @include fontRusso($white, 24px);
           text-transform: uppercase;
           margin: 10px 0;
+          text-align: left;
         }
 
         &-text {
           @include fontExo($white, 16px);
           // text-transform: lowercase;
-          text-align: center;
+          // text-align: center;
+          text-align: left;
         }
       }
     }
@@ -177,11 +181,13 @@
     .data {
       width: 100%;
       @include flexAlign(flex-start, center);
+      text-align: left;
 
       &__item {
         @include flexAlign(center, center, column);
         flex: 0 0 100%;
         padding: 0 20px;
+        text-align: left;
 
         &-head {
           @include fontRusso($white, 24px);
@@ -192,7 +198,8 @@
         &-text {
           @include fontExo($white, 16px);
           // text-transform: lowercase;
-          text-align: center;
+          // text-align: center;
+          text-align: left;
         }
       }
     }
