@@ -131,11 +131,11 @@
 
     .data {
       width: 100%;
-      @include flexAlign(flex-start, center);
+      @include flexAlign(flex-start, flex-start);
       text-align: left;
 
       &__item {
-        @include flexAlign(center, center, column);
+        @include flexAlign(flex-start, flex-start, column);
         flex: 0 0 100%;
         padding: 0 20px;
         text-align: left;
