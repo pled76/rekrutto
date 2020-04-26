@@ -2,7 +2,7 @@
   <div class="main-wrap">
     <div class="brand">
       <h1 v-if="mainHead" class="brand__head">{{mainHead}}</h1>
-      <div v-if="useSvg" class="logo80" ref="logo">
+      <div v-if="useSvg" class="logo80" >
         <img class="logo80-svg" :src="require(`../static/${useSvg}.svg`)"/>
       </div>
       <div v-else class="logo" ref="logo">
@@ -64,6 +64,7 @@
       font-size: 2em;
       margin: 10vh 20px 10vh 20px;
       text-transform: uppercase;
+      max-height: 30vh;
     }
   }
 
@@ -82,6 +83,7 @@
 
     &-svg {
       width: 100%;
+      max-height: 60vh;
     }
   }
 
@@ -95,5 +97,15 @@
     fill: #ffffff;
     stroke: #ffffff;
     stroke-width: 1;
+  }
+
+  @media screen and (max-width: 968px) and (min-height: 780px) {
+    .logo {
+      display: none;
+    }
+
+    .logo80 {
+      display: none
+    }
   }
 </style>
