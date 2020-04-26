@@ -1,30 +1,19 @@
 <template>
-  <div class="data-page">
-    <img class="logo-svg" src="../static/Как это работает.svg"></img>
-  </div>
+  <DataPage mainHead="Как это работает" :mainData="pageData" useSvg="Как это работает" ></DataPage>
 </template>
 
 <script>
+  import DataPage from '../components/DataPage'
+  import pageData from '../schemes/howitworks'
+
   export default {
+
     data() {
       return {
+        pageData
       }
-    }
+    },
+
+    components: { DataPage }
   }
 </script>
-
-<style lang="scss" scoped>
-  img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .data-page {
-    width: 100%;
-    height: calc(100vh - #{$headerHeight});
-    position: relative;
-    top: $headerHeight;
-    @include flexAlign(center, center)
-    overflow-y: auto;
-  }
-</style>

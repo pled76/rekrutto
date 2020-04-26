@@ -2,9 +2,11 @@
   <div class="main-wrap">
     <div class="brand">
       <h1 v-if="mainHead" class="brand__head">{{mainHead}}</h1>
-      <div class="logo" ref="logo">
-        <img v-if="useSvg" class="logo-svg" :src="require(`../static/${useSvg}.svg`)"/>
-        <svg v-else class="logo-svg" id="one" viewBox="0 0 117.1 171.3">
+      <div v-if="useSvg" class="logo80" ref="logo">
+        <img class="logo80-svg" :src="require(`../static/${useSvg}.svg`)"/>
+      </div>
+      <div v-else class="logo" ref="logo">
+        <svg class="logo-svg" id="one" viewBox="0 0 117.1 171.3">
           <path class="st0" d="M99,161.8H18.5c-2.4,0-4.4-2-4.4-4.4v-15.4c0-2.4,2-4.4,4.4-4.4H99c2.4,0,4.4,2,4.4,4.4v15.4
           C103.4,159.9,101.4,161.8,99,161.8z"/>
           <path class="st1" d="M102.9,119.3L84,81.7c-0.3-0.4-0.4-1-0.4-1.8c0-0.8,0.5-1.4,1.3-2c5.3-3.3,9.3-7.6,12-12.8
@@ -60,7 +62,7 @@
       font-family: 'Cunia', sans-serif;
       color: $white;
       font-size: 2em;
-      margin: 0 20px 10vh 20px;
+      margin: 10vh 20px 10vh 20px;
       text-transform: uppercase;
     }
   }
@@ -68,6 +70,15 @@
   .logo {
     position: relative;
     width: 210px;
+
+    &-svg {
+      width: 100%;
+    }
+  }
+
+  .logo80 {
+    position: relative;
+    width: 80%;
 
     &-svg {
       width: 100%;
