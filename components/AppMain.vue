@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrap">
     <div class="brand">
-      <h1 v-if="mainHead" class="brand__head">{{mainHead}}</h1>
+      <h1 v-if="mainHead" class="brand__head80">{{mainHead}}</h1>
       <div v-if="useSvg" class="logo80" >
         <img class="logo80-svg" :src="require(`../static/${useSvg}.svg`)"/>
       </div>
@@ -59,6 +59,15 @@
     @include flexAlign(center, center, column);
 
     &__head {
+      font-family: 'Cunia', sans-serif;
+      color: $white;
+      font-size: 2em;
+      margin: 0 20px 10vh 20px;
+      text-transform: uppercase;
+      max-height: 30vh;
+    }
+
+    &__head80 {
       font-family: 'Cunia', sans-serif;
       color: $white;
       font-size: 2em;

@@ -21,6 +21,9 @@
         <li class="contacts__item">
           <p class="contacts__item-text">КПП:&nbsp;772001001</p>
         </li>
+        <li class="contacts__item">
+          <p class="contacts__item-text">Рег № 77-20-017344 Приказ № 58 от 27.04.2020</p>
+        </li>
       </ul>
     </div>
   </div>
