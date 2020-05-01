@@ -34,13 +34,10 @@
         </div>
         <button v-if="confirmed" @click="doLogin()" >Войти</button>
         <div class="row pad__top">
-          <a class="golden" href="/policy">Политика использования ПД</a>
-        </div>
-        <div class="row pad__top">
           <a class="golden" href="#" @click="confirmed = !confirmed">{{ confirmText }}</a>
         </div>
         <div class="row">
-          <a href="/confirmation" class="little__text">своё согласие с политикой использования ПД</a>
+          <a href="/confirmation" class="little__text pad__top">своё согласие с политикой использования ПД</a>
         </div>
       </div>
       <div class="form__title golden large_text">ВМЕСТЕ МЫ МОЖЕМ БОЛЬШЕ</div>
