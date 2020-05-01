@@ -102,6 +102,7 @@
   .header-logo {
     @include flexAlign(center, center);
     @include fontRusso($black, 24px)
+    cursor: pointer;
   }
 
   .nav {

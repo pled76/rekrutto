@@ -1,5 +1,5 @@
 <template>
-  <DataPage mainHead="Возможности приложения" :mainData="pageData" ></DataPage>
+  <DataPage mainHead="Наши возможности" :mainData="pageData" ></DataPage>
 </template>
 
 <script>
