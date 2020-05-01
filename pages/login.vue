@@ -10,9 +10,9 @@
         </div>
         <div class="one__col half__width">
           <div class="form__title golden">ВХОД В СИСТЕМУ</div>
-          <div>Введите адрес своей корпоративной почты</div>
+          <div>Введите адрес своей корпоративной почты.</div>
           <br>
-          <div>Введите ранее указанный пароль</div>
+          <div>Введите ранее указанный пароль. Нажмите ссылку Подтвердить, появится кнопка Войти.</div>
         </div>
       </div>
       <form>
@@ -65,6 +65,10 @@
 
     methods: {
       doLogin() {
+        if (!this.confirmed) {
+          this.loginError = 'Нажмите ссылку Подтвердить'
+          return
+        }
         this.loginError = ''
         backend.doLogin(this.login, this.pwd, this.$store)
           .then(() => {
