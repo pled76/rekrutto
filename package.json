@@ -26,10 +26,10 @@
     "eslint-loader": "^3.0.4",
     "eslint-plugin-vue": "^6.1.2",
     "extract-text-webpack-plugin": "^3.0.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.0",
     "nodemon": "^2.0.3",
-    "sass": "^1.25.0",
+    "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "terser-webpack-plugin": "^2.3.5"
+    "terser-webpack-plugin": "^2.3.6"
   }
 }
