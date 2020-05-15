@@ -21,9 +21,15 @@ module.exports = {
   buildModules: [],
   modules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
   ],
   styleResources: {
     scss: ['~/assets/scss/_global.scss']
+  },
+  sitemap: {
+    hostname: 'https://www.rekrutto.ru',
+    gzip: true,
   },
   build: {
     vendor: [],

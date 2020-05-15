@@ -11,6 +11,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/robots": "^2.4.2",
+    "@nuxtjs/sitemap": "^2.3.0",
     "axios": "^0.19.2",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
