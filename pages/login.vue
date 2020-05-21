@@ -5,6 +5,7 @@
         <div class="one__col half__width input__wrap">
           <div class="row form__title golden">РЕГИСТРАЦИЯ</div>
           <div class="row">Введите адрес своей корпоративной почты и придумайте ПАРОЛЬ.</div>
+          <br>
           <div class="row">Нажмите Отправить.</div>
           <form>
             <div class="row">
@@ -207,6 +208,10 @@
     .row {
       @include flexAlign(baseline, left, column)
     }
+
+    .from__top {
+      top: 20vh;
+    }
   }
 
   @media screen and (max-height: 500px) {
@@ -218,8 +223,5 @@
       @include fontExo($black, 4vw)
     }
 
-    .from__top {
-      top: 2em;
-    }
   }
 </style>

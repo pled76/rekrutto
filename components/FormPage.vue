@@ -79,7 +79,7 @@
     position: absolute;
     top: $headerHeight;
     text-align: center;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
 
   .main-wrap {
