@@ -2,7 +2,7 @@
   <div class="main-page">
     <div class="main-wrap">
       <div class="brand">
-        <div class="logo" ref="logo">
+        <div v-if="!skipLogo" class="logo" ref="logo">
           <svg class="logo-svg" id="one" viewBox="0 0 117.1 171.3">
             <path class="st0" d="M99,161.8H18.5c-2.4,0-4.4-2-4.4-4.4v-15.4c0-2.4,2-4.4,4.4-4.4H99c2.4,0,4.4,2,4.4,4.4v15.4
           C103.4,159.9,101.4,161.8,99,161.8z"/>
@@ -14,7 +14,7 @@
           c0-2,1.6-3.6,3.6-3.6c5,0,13.6,0,14,0c12,0,14.9,9,14.8,19.6C74.1,57.2,70.1,65.9,59,65.9z"/>
           </svg>
         </div>
-        <h1 class="brand__head">Rekrutto</h1>
+        <h1 class="brand__head">{{ useHeader ? useHeader : 'Rekrutto' }}</h1>
       </div>
       <div class="slogan-block">
         <slot></slot>
@@ -25,6 +25,8 @@
 
 <script>
   export default {
+    props: ['skipLogo', 'useHeader'],
+
     head: {},
     transition: {
       mode: 'out-in',
@@ -77,7 +79,7 @@
     position: absolute;
     top: $headerHeight;
     text-align: center;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
 
   .main-wrap {
