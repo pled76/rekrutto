@@ -1,5 +1,5 @@
 <template>
-  <FormPage>
+  <FormPage skipLogo="true" useHeader="Добро пожаловать в REKRUTTO!">
     <div class="one__col from__top">
       <div class="row">
         <div class="one__col half__width">
@@ -7,10 +7,10 @@
           <div>Введите адрес своей корпоративной почты и придумайте ПАРОЛЬ.</div>
           <div>Нажмите Отправить.</div>
           <form>
-            <div class="row">
+            <div class="row input__wrap">
               <input v-model="login0" placeholder="Адрес рабочей почты" autocomplete="username" @keyup.enter="doLogin(0)" />
             </div>
-            <div class="row">
+            <div class="row input__wrap">
               <input v-model="pwd0" placeholder="Пароль" autocomplete="current-password" :type="pwdType0" @keyup.enter="doLogin(0)" />
             </div>
             <div class="row">
@@ -28,10 +28,10 @@
           <br>
           <div>Нажмите Подтвердить, далее нажмите Войти.</div>
           <form>
-            <div class="row">
+            <div class="row input__wrap">
               <input v-model="login1" placeholder="Адрес рабочей почты" autocomplete="username" @keyup.enter="doLogin(1)" />
             </div>
-            <div class="row">
+            <div class="row input__wrap">
               <input v-model="pwd1" placeholder="Пароль" autocomplete="current-password" :type="pwdType1" @keyup.enter="doLogin(1)" />
             </div>
             <div class="row">
@@ -57,8 +57,8 @@
 </template>
 
 <script>
-  import FormPage from '@/components/FormPage'
-  import backend from '@/api/backend'
+  import FormPage from '../components/FormPage'
+  import backend from '../api/backend'
 
   export default {
     data() {
@@ -127,11 +127,17 @@
 
 <style lang="scss" scoped>
   form input {
-    @include fontExo($black, 1.5vw)
+    @include fontExo($black, 2.5vw)
+    text-align: left;
+  }
+
+  .input__wrap {
+    padding-left: 1vh;
+    padding-right: 1vh;
   }
 
   div button {
-    @include fontExo($black, 1.5vw)
+    @include fontExo($black, 2.5vw)
   }
 
   .pad__top {
@@ -150,7 +156,7 @@
 
   .one__col {
     @include flexAlign(center, center, column)
-    @include fontExo($white, 1.5vw)
+    @include fontExo($white, 2vw)
   }
 
   .half__width {
@@ -172,12 +178,20 @@
   }
 
   .large_text {
-    @include fontExo($gold, 1.5em)
+    @include fontExo($gold, 2em)
   }
 
   @media screen and (max-width: 968px) {
+    form input {
+      @include fontExo($black, 5vw)
+    }
+
+    div button {
+      @include fontExo($black, 5vw)
+    }
+
     .one__col {
-      @include fontExo($white, 1.5vh)
+      @include fontExo($white, 2vh)
     }
 
     .row {
@@ -186,6 +200,14 @@
   }
 
   @media screen and (max-height: 500px) {
+    form input {
+      @include fontExo($black, 5vw)
+    }
+
+    div button {
+      @include fontExo($black, 5vw)
+    }
+
     .from__top {
       top: 2em;
     }
