@@ -2,15 +2,15 @@
   <FormPage skipLogo="true" useHeader="Добро пожаловать в REKRUTTO!">
     <div class="one__col from__top">
       <div class="row">
-        <div class="one__col half__width">
-          <div class="form__title golden">РЕГИСТРАЦИЯ</div>
-          <div>Введите адрес своей корпоративной почты и придумайте ПАРОЛЬ.</div>
-          <div>Нажмите Отправить.</div>
+        <div class="one__col half__width input__wrap">
+          <div class="row form__title golden">РЕГИСТРАЦИЯ</div>
+          <div class="row">Введите адрес своей корпоративной почты и придумайте ПАРОЛЬ.</div>
+          <div class="row">Нажмите Отправить.</div>
           <form>
-            <div class="row input__wrap">
+            <div class="row">
               <input v-model="login0" placeholder="Адрес рабочей почты" autocomplete="username" @keyup.enter="doLogin(0)" />
             </div>
-            <div class="row input__wrap">
+            <div class="row">
               <input v-model="pwd0" placeholder="Пароль" autocomplete="current-password" :type="pwdType0" @keyup.enter="doLogin(0)" />
             </div>
             <div class="row">
@@ -22,16 +22,16 @@
           </div>
           <button v-if="confirmed0" @click="doLogin(0)" >Отправить</button>
         </div>
-        <div class="one__col half__width">
-          <div class="form__title golden">ВХОД В СИСТЕМУ</div>
-          <div>Введите свою почту и пароль.</div>
+        <div class="one__col half__width input__wrap">
+          <div class="row form__title golden">ВХОД В СИСТЕМУ</div>
+          <div class="row">Введите свою почту и пароль.</div>
           <br>
-          <div>Нажмите Подтвердить, далее нажмите Войти.</div>
+          <div class="row">Нажмите Подтвердить, далее нажмите Войти.</div>
           <form>
-            <div class="row input__wrap">
+            <div class="row">
               <input v-model="login1" placeholder="Адрес рабочей почты" autocomplete="username" @keyup.enter="doLogin(1)" />
             </div>
-            <div class="row input__wrap">
+            <div class="row">
               <input v-model="pwd1" placeholder="Пароль" autocomplete="current-password" :type="pwdType1" @keyup.enter="doLogin(1)" />
             </div>
             <div class="row">
@@ -127,8 +127,9 @@
 
 <style lang="scss" scoped>
   form input {
-    @include fontExo($black, 2.5vw)
+    @include fontExo($black, 2vw)
     text-align: left;
+    width: 100%;
   }
 
   .input__wrap {
@@ -137,7 +138,7 @@
   }
 
   div button {
-    @include fontExo($black, 2.5vw)
+    @include fontExo($black, 2vw)
   }
 
   .pad__top {
@@ -157,9 +158,12 @@
   .one__col {
     @include flexAlign(center, center, column)
     @include fontExo($white, 2vw)
+    text-align: left;
+    width: 100%;
   }
 
   .half__width {
+    text-align: left;
     width: 50%;
   }
 
@@ -169,7 +173,9 @@
   }
 
   .row {
-    @include flexAlign(baseline, center)
+    @include flexAlign(baseline, left)
+    text-align: left;
+    width: 100%;
   }
 
   .form__title {
@@ -183,29 +189,33 @@
 
   @media screen and (max-width: 968px) {
     form input {
-      @include fontExo($black, 5vw)
+      @include fontExo($black, 4vw)
     }
 
     div button {
-      @include fontExo($black, 5vw)
+      @include fontExo($black, 4vw)
     }
 
     .one__col {
       @include fontExo($white, 2vh)
     }
 
+    .half__width {
+      width: 100%;
+    }
+
     .row {
-      @include flexAlign(center, center, column)
+      @include flexAlign(baseline, left, column)
     }
   }
 
   @media screen and (max-height: 500px) {
     form input {
-      @include fontExo($black, 5vw)
+      @include fontExo($black, 4vw)
     }
 
     div button {
-      @include fontExo($black, 5vw)
+      @include fontExo($black, 4vw)
     }
 
     .from__top {
