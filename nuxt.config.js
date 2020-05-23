@@ -35,9 +35,7 @@ module.exports = {
   build: {
     vendor: [],
     postcss: [
-      require('autoprefixer')({
-        browsers: ['> 1%', 'last 10 versions']
-      }),
+      require('autoprefixer')(),
       require('css-mqpacker')()
     ],
     generate: {
