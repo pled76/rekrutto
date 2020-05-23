@@ -6,8 +6,8 @@
     <div class="right-block">
       <ul class="data">
         <li class="data__item" v-for="it in data" :key="it.title">
-          <h2 class="data__item-head"><span v-html="it.title"></span></h2>
-          <p class="data__item-text" v-for="t in it.values" :key="t"><span v-html="t"></span></p>
+          <h2 class="data__item-head"><span v-html="prepareStr(it.title)"></span></h2>
+          <p class="data__item-text" v-for="t in it.values" :key="t"><span v-html="prepareStr(t)"></span></p>
         </li>
       </ul>
     </div>
@@ -46,6 +46,15 @@
       this.tl.set('.data__item', { y: -50 })
         .to('.main-head', .5, { opacity: 1, x: 0 })
         .staggerTo('.data__item', .5, { opacity: 1, y: 0 }, .125, '-=.3')
+    },
+
+    methods: {
+      prepareStr(s) {
+        if (!s || !s.includes || !s.includes('__IF_LOGGED_IN__'))
+          return s
+        let res = s.replace('__IF_LOGGED_IN__', '')
+        return this.$store.state.isLoggedIn ? res : ''
+      }
     },
 
     components: { AppMain }
