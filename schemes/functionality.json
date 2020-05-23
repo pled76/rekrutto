@@ -25,9 +25,9 @@
     ]
   },
   {
-    "title": "Скачать приложение",
+    "title": "__IF_LOGGED_IN__Скачать приложение",
     "values": [
-      "<a href='https://play.google.com/store/apps/details?id=com.notissimus.istaff&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style='max-width: 60%;' alt='Доступно в Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/ru_badge_web_generic.png'/></a>"
+      "__IF_LOGGED_IN__<a href='https://play.google.com/store/apps/details?id=com.notissimus.istaff&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style='max-width: 60%;' alt='Доступно в Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/ru_badge_web_generic.png'/></a>"
     ]
   },
   {
