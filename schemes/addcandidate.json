@@ -1,23 +1,5 @@
 [
   {
-    "title": "НЕСКОЛЬКО ВАЖНЫХ МОМЕНТОВ, КОТОРЫЕ ПОМОГУТ ВАМ БЫСТРЕЕ СОРИЕНТИРОВАТЬСЯ:",
-    "values": [
-      "<span class=\"golden\">Профиль.</span> Заполните максимальное количество полей, тогда рекомендации системы будут точнее, а Вы быстрее трудоустроитесь.",
-      "<span class=\"golden\">Обработка.</span> После размещения резюме Ваши данные попадут в систему, она предложит Вас на наиболее релевантные Вашему профилю позиции.",
-      "<span class=\"golden\">Рейтинг.</span> Чем выше соответствие Вашего профиля и вакансии, тем выше Ваш рейтинг на эту позицию.",
-      "<span class=\"golden\">Приглашения.</span> Работодатели в первую очередь обрабатывают кандидатов с максимальным соответствием «профиль-вакансия».",
-      "Уважаемые работодатели!<br><span class=\"golden\">Заполните максимальное количество полей в форме кандидата,</span> тогда автоматическая система подбора Rekrutto предложит Ваших кандидатов на наиболее подходящие для них вакансии, <span class=\"golden\">что значительно повысит вероятность их трудоустройства!</span>"
-    ]
-  },
-  {
-    "title": "<p class=\"golden\">Делиться выгоднее, чем накапливать</p>",
-    "values": [
-      "__IF_LOGGED_IN__скачать приложение:",
-      "__IF_LOGGED_IN__<a href='https://play.google.com/store/apps/details?id=com.notissimus.istaff&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style='max-width: 60%;' alt='Доступно в Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/ru_badge_web_generic.png'/></a>",
-      "<span class=\"golden\">Законодательство.</span> Мы соблюдаем закон, поэтому, переходя по ссылке <a style=\"color: white;\" href=\"/fillvacancy\">«Разместить вакансию»</a> или «Скачать приложение», Вы даёте свое согласие на обработку Ваших данных и подтверждаете, что ознакомились и согласились с нашей <a style=\"color: white;\" href=\"/policy\">Политикой обработки персональных данных</a> и <a style=\"color: white;\" href=\"/eula\">Условиями использования Пользователями</a> материалов и сервисов сайта www.rekrutto.ru."
-    ]
-  },
-  {
     "title": "<a class=\"golden\" href=\"/fillprofile\">Заполнить профиль</a>",
     "values": [
       "Заполнить профиль кандидата или добавить резюме"
@@ -27,6 +9,20 @@
     "title": "<a class=\"golden\" href=\"/massimport\">Массовый импорт</a>",
     "values": [
       "Загрузить резюме разных кандидатов одним кликом"
+    ]
+  },
+  {
+    "title": "",
+    "values": [
+      "Размещая резюме или вакансии на нашем сайте, Вы даёте свое согласие на обработку Ваших данных и подтверждаете, что ознакомились и согласились с нашей <a style=\"color: white;\" href=\"/policy\">Политикой обработки персональных данных</a>",
+      "__IF_LOGGED_IN__скачать приложение:",
+      "__IF_LOGGED_IN__<a href='https://play.google.com/store/apps/details?id=com.notissimus.istaff&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style='max-width: 60%;' alt='Доступно в Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/ru_badge_web_generic.png'/></a>"
+    ]
+  },
+  {
+    "title": "",
+    "values": [
+      "<a style=\"color: white;\" href=\"/eula\">Условия использования Пользователями</a> материалов и сервисов сайта www.rekrutto.ru."      
     ]
   }
 ]

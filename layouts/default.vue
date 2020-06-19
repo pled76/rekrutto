@@ -1,5 +1,11 @@
 <template>
   <div class="container">
+    <div class="video">
+      <div class="video__color"></div>
+      <video class="video__source" autoplay muted >
+        <source src="../assets/video/rekrutto.mp4">
+      </video>
+    </div>
     <transition name="slideIn">
       <AppHeader v-show="showHeader"/>
     </transition>
