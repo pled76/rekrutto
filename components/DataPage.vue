@@ -1,7 +1,7 @@
 <template>
   <div class="data-page">
     <div class="left-block">
-      <AppMain :disableBrandHead="mainHead" :mainHead="mainHead" :useSvg="useSvg"></AppMain>
+      <AppMain :disableBrandHead="mainHead" :mainHead="mainHead" :useSvg="useSvg" :disableSvg="disableSvg"></AppMain>
     </div>
     <div class="right-block">
       <ul class="data">
@@ -19,7 +19,7 @@
   import AppMain from './AppMain'
 
   export default {
-    props: ['mainHead', 'mainData', 'useSvg'],
+    props: ['mainHead', 'mainData', 'useSvg', 'disableSvg'],
 
     transition: {
       css: false,
@@ -111,7 +111,7 @@
       }
 
       &-text {
-        @include fontExo($white, 1vw);
+        @include fontExo($white, 1.5vw);
         // text-transform: lowercase;
         margin-top: 10px;
       }

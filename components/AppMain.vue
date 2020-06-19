@@ -1,11 +1,11 @@
 <template>
   <div class="main-wrap">
     <div class="brand">
-      <h1 v-if="mainHead" class="brand__head80">{{mainHead}}</h1>
+      <h1 v-if="mainHead" class="brand__head80"><span v-html="mainHead" /></h1>
       <div v-if="useSvg" class="logo80" >
         <img class="logo80-svg" :src="require(`../static/${useSvg}.svg`)"/>
       </div>
-      <div v-else class="logo" ref="logo">
+      <div v-else-if="!disableSvg" class="logo" ref="logo">
         <svg class="logo-svg" id="one" viewBox="0 0 117.1 171.3">
           <path class="st0" d="M99,161.8H18.5c-2.4,0-4.4-2-4.4-4.4v-15.4c0-2.4,2-4.4,4.4-4.4H99c2.4,0,4.4,2,4.4,4.4v15.4
           C103.4,159.9,101.4,161.8,99,161.8z"/>
@@ -24,7 +24,7 @@
 
 <script>
   export default {
-    props: ['disableBrandHead', 'mainHead', 'useSvg'],
+    props: ['disableBrandHead', 'mainHead', 'useSvg', 'disableSvg'],
 
     components: {},
 
@@ -70,9 +70,10 @@
     &__head80 {
       font-family: 'Cunia', sans-serif;
       color: $white;
-      font-size: 2em;
+      font-size: 4em;
       margin: 10vh 20px 10vh 20px;
       text-transform: uppercase;
+      text-align: right;
       max-height: 30vh;
     }
   }
