@@ -1,7 +1,7 @@
 {
   "name": "Rekrutto",
   "version": "1.0.0",
-  "description": "Official web page of mobile app",
+  "description": "Онлайн платформа для обмена персоналом",
   "author": "Anar Allakhverdiev",
   "private": true,
   "scripts": {
