@@ -29,9 +29,10 @@
       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
       ym(65103928, "init", {
-           clickmap:true,
-           trackLinks:true,
-           accurateTrackBounce:true
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
       });
       // <!-- /Yandex.Metrika counter -->
 
