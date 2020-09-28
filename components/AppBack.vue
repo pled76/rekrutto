@@ -5,6 +5,7 @@
         ref="lines"
         class="line"
         v-for="it in 12"
+        :key="it"
         :d="`M${(sizes.width/12) * (it)} 0 ${(sizes.width/12) * (it)} ${sizes.height}`"
       />
     </svg>

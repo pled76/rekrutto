@@ -60,7 +60,7 @@ export default {
     }
     let t = title ? '?t=' + title : ''
     let q = qry ? (t ? '&q=' + qry : '?q=' + qry) : ''
-    return axios.get(this.useBack + '/redirect/' + bo + t + q)
+    return axios.get(this.useBack + '/assets/spa2/webapp/' + bo + t + q)
       .then(() => {
         window.open(this.useBack, typ)
       })
