@@ -1,7 +1,7 @@
 const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
-  mode: 'universal',
+  ssr: false,
   head: {
     title: process.env.npm_package_name || '',
     meta: [
